@@ -2,98 +2,36 @@
     "source": "\"IBGE - Índice Nacional de Preços ao Consumidor Amplo\"",
     "title": "Variação acumulada no ano durante o Plano Real",
     "valuesMap": {
-        "dezembro 1995": {
-            "Brasil": "22,41"
-        },
-        "dezembro 1996": {
-            "Brasil": "9,56"
-        },
-        "dezembro 1997": {
-            "Brasil": "5,22"
-        },
-        "dezembro 1998": {
-            "Brasil": "1,65"
-        },
-        "dezembro 1999": {
-            "Brasil": "8,94"
-        },
-        "dezembro 2000": {
-            "Brasil": "5,97"
-        },
-        "dezembro 2001": {
-            "Brasil": "7,67"
-        },
-        "dezembro 2002": {
-            "Brasil": "12,53"
-        },
-        "dezembro 2003": {
-            "Brasil": "9,30"
-        },
-        "dezembro 2004": {
-            "Brasil": "7,60"
-        },
-        "dezembro 2005": {
-            "Brasil": "5,69"
-        },
-        "dezembro 2006": {
-            "Brasil": "3,14"
-        },
-        "dezembro 2007": {
-            "Brasil": "4,46"
-        },
-        "dezembro 2008": {
-            "Brasil": "5,90"
-        },
-        "dezembro 2009": {
-            "Brasil": "4,31"
-        },
-        "dezembro 2010": {
-            "Brasil": "5,91"
-        },
-        "dezembro 2011": {
-            "Brasil": "6,50"
-        },
-        "dezembro 2012": {
-            "Brasil": "5,84"
-        },
-        "dezembro 2013": {
-            "Brasil": "5,91"
-        },
-        "dezembro 2014": {
-            "Brasil": "6,41"
-        },
-        "dezembro 2015": {
-            "Brasil": "10,67"
-        },
-        "dezembro 2016": {
-            "Brasil": "6,29"
-        },
-        "dezembro 2017": {
-            "Brasil": "2,95"
-        },
-        "dezembro 2018": {
-            "Brasil": "3,75"
-        },
-        "dezembro 2019": {
-            "Brasil": "4,31"
-        },
-        "dezembro 2020": {
-            "Brasil": "4,52"
-        },
-        "dezembro 2021": {
-            "Brasil": "10,06"
-        },
-        "dezembro 2022": {
-            "Brasil": "5,79"
-        },
-        "dezembro 2023": {
-            "Brasil": "4,62"
-        },
-        "dezembro 2024": {
-            "Brasil": "4,83"
-        },
-        "outobro 2025": {
-            "Brasil": "0,09"
-        }
+        "1995": "22,41",
+        "1996": "9,56",
+        "1997": "5,22",
+        "1998": "1,65",
+        "1999": "8,94",
+        "2000": "5,97",
+        "2001": "7,67",
+        "2002": "12,53",
+        "2003": "9,30",
+        "2004": "7,60",
+        "2005": "5,69",
+        "2006": "3,14",
+        "2007": "4,46",
+        "2008": "5,90",
+        "2009": "4,31",
+        "2010": "5,91",
+        "2011": "6,50",
+        "2012": "5,84",
+        "2013": "5,91",
+        "2014": "6,41",
+        "2015": "10,67",
+        "2016": "6,29",
+        "2017": "2,95",
+        "2018": "3,75",
+        "2019": "4,31",
+        "2020": "4,52",
+        "2021": "10,06",
+        "2022": "5,79",
+        "2023": "4,62",
+        "2024": "4,83",
+        "2025": "0,09"
     }
 }
