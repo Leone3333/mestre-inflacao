@@ -5,18 +5,37 @@ let app = express();
 
 let port = 5500;
 
+app.use(express.json());
+
 app.get('/', (req,res) => {
     res.send("Servidor aberto")
 });
 
 app.post('/calc', (req,res) =>{
+    
+    // formulario via body
+    // const r = req.body;
+    
+    // Formulario via url
     const r = req.query;
+    
+    let msg = "Erro no tipo de operação";
 
-    const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor)
+    const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
     
+    if(r.tipoOperacao === "valorizar"){
+        return res.send(calculo.valorizar());
+    }
     
-    res.send(calculo.getIpcas());
-})
+    if(r.tipoOperacao === "desvalorizar"){
+        return res.send(calculo.desvalorizar());
+
+    }else{
+        return res.send(calculo.getIpcas());
+    }
+
+    return res.status(400).send("Erro na requisição");
+});
 
 app.listen(port, () => {
     console.log(`Servidor aberto na porta http://localhost:/${port}/`)

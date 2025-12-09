@@ -7,7 +7,7 @@ Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia e
 
 ### Cálculos 
 
-#### Calculo desvalorização 
+#### Calculo valorização 
     1º Passo: Recebe o ano e o valor para saber o poder de compra na época
 
     2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
@@ -18,7 +18,7 @@ Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia e
 
     4º valorAntigo = valorAtual/todosFatores
 
-#### Calculo valorização 
+#### Calculo desvalorização 
     1º Passo: Recebe o ano e o valor para saber o poder de compra na época nos dias de hoje
 
     2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
