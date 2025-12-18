@@ -1,42 +1,20 @@
+// import express
 import express from 'express';
-import { CalculoController } from './app/controller/CalculoController.js'; //
+// importa rotas
+import {router} from './app/router/route.js';
 
+// inciializar servidor e define porta
 let app = express();
-
 let port = 5500;
 
+// utilizar o json
 app.use(express.json());
 
-app.get('/', (req,res) => {
-    res.send("Servidor aberto")
-});
+// chama as rotas
+app.use('/',router);
+app.use('/calc',router);
 
-app.post('/calc', (req,res) =>{
-    
-    // formulario via body
-    // const r = req.body;
-    
-    // Formulario via url
-    const r = req.query;
-    
-    let msg = "Erro no tipo de operação";
-
-    const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
-    
-    if(r.tipoOperacao === "valorizar"){
-        return res.send(calculo.valorizar());
-    }
-    
-    if(r.tipoOperacao === "desvalorizar"){
-        return res.send(calculo.desvalorizar());
-
-    }else{
-        return res.send(calculo.getIpcas());
-    }
-
-    return res.status(400).send("Erro na requisição");
-});
-
+// mensagem de incialização do servidor
 app.listen(port, () => {
     console.log(`Servidor aberto na porta http://localhost:/${port}/`)
 });
