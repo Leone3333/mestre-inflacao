@@ -7,6 +7,10 @@ router.get('/', (req,res) => {
     res.send("Servidor aberto")
 });
 
+// router.get('/operacao', (req,res) => {
+//     res.render("operacao")
+// });
+
 router.post('/calc', (req,res) =>{
     
     // formulario via body
@@ -20,12 +24,12 @@ router.post('/calc', (req,res) =>{
     const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
     
     if(r.tipoOperacao === "valorizar"){
-        return res.send(calculo.valorizar());
+        return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.valorizar()});
     }
     
     if(r.tipoOperacao === "desvalorizar"){
-        return res.send(calculo.desvalorizar());
-
+        // console.log(calculo.desvalorizar());
+        return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.desvalorizar()});
     }else{
         return res.send(calculo.getIpcas());
     }
