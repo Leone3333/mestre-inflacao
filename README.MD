@@ -1,8 +1,10 @@
-# Reais antigos
+# Mestre inflação
 
 ## Descrição
 Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia em um ano X
 
+
+## Instalação 
 ## Funcionamento
 
 ### Cálculos 
@@ -28,6 +30,25 @@ Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia e
         todosFatores = (fator1995 * fator1996...fator2025) 
 
     4º valorAntigo = valorAtual * todosFatores
+
+## Instalçao
+    
+    1º Clone o respositorio: git clone <url-do-repositorio>
+
+    2º Acesse a pasta do projeto: cd MESTRE_INFLACAO
+
+    3º Instale as dependencias para abrir no servidro local: npm install ou npx nodemon index.js
+
+    4º Abra o navegador e acesse: http://localhost:3000
+    
+## 🚀 Tecnologias Utilizadas
+
+- Node.js
+- Express
+- EJS (Template Engine)
+- JavaScript
+- HTML
+
 
 ### Versões
 -- Versão web com node Beta
