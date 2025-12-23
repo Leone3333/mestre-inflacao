@@ -44,9 +44,9 @@ class CalculoController {
         }
     }
 
-    // Este método calcula o quanto a moeda vai valorizando ao voltar no tempo
+    // Este método reverte o valor da moeda de hoje em dia para o valor antigo retirando a inflação acumulada  
     // EX: quanto valia 1400 R$ de hoje em 2010?  
-    valorizar = () => {
+    reverter = () => {
         let f = this.fatores();
 
         let valorAntigo = this.valor/f;
@@ -54,9 +54,9 @@ class CalculoController {
         return this.arredondarPor5cents(valorAntigo,2).toFixed(2);
     }
 
-    // Este método calcula o quanto a moeda vai desvalorizando com o passar do tempo
+    // Este método atualiza o valor antigo para o valor de hoje aplicando a inflação acumulada
     // EX: 700 R$ 2010 valem aproximadamente quanto hoje em dia?  
-    desvalorizar = () => {
+    atualizar = () => {
         let f = this.fatores();
 
         let valorAtual = this.valor*f;

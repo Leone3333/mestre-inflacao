@@ -1,5 +1,7 @@
-// import express
+// import express e session
 import express from 'express';
+import session from 'express-session';
+
 // importa rotas
 import {router} from './app/router/route.js';
 
@@ -16,6 +18,12 @@ const __diretorio =  caminho.dirname(__nommeArquivo); //retorna o diretorio que 
 
 const caminhoPublic = caminho.join(__diretorio, 'public'); //retorna o diretorio da pasta public
 const caminhoViews = caminho.join(__diretorio, 'views'); //retorna o diretorio da pasta viwes
+
+// configuração do express para lidar com session
+app.use(session({secret:'segredo',resave:false,saveUninitialized:true}));
+
+// configuração do express para lidar com formulários urlencoded
+app.use(express.urlencoded({ extended: true }));
 
 // utilizar o json
 app.use(express.json());

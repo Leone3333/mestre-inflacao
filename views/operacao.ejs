@@ -6,7 +6,16 @@
     <title>Operacao</title>
 </head>
 <body>
-    <h1>Operacao <%= operacao %> bem sucedida</h1>
-    <h2>Resultado: <%= resultado %> </h2>
+    <h1>Operação escolhida</h1>
+
+    <% if(operacaoSess === 'atualizar'){%>
+        <p>Para que ano iremos voltar? (atualizar)</p>
+
+    <% } else if(operacaoSess === 'reverter'){%>
+        <p>Em que ano estamos? (reverter)</p>
+
+    <% } else {%>
+        <p>Nenhum valor escolhido</p>
+    <% } %>
 </body>
 </html>

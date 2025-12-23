@@ -4,37 +4,43 @@ import { CalculoController } from '../controller/CalculoController.js';
 const router = express.Router();
 
 router.get('/', (req,res) => {
-    res.send("Servidor aberto")
+    res.render("home")
 });
 
 // router.get('/operacao', (req,res) => {
 //     res.render("operacao")
 // });
 
-router.post('/calc', (req,res) =>{
-    
-    // formulario via body
-    // const r = req.body;
-    
-    // Formulario via url
-    const r = req.query;
-    
-    let msg = "Erro no tipo de operação";
+router.post('/tipo', (req,res) =>{
+     const r = req.body;
 
-    const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
-    
-    if(r.tipoOperacao === "valorizar"){
-        return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.valorizar()});
-    }
-    
-    if(r.tipoOperacao === "desvalorizar"){
-        // console.log(calculo.desvalorizar());
-        return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.desvalorizar()});
-    }else{
-        return res.send(calculo.getIpcas());
-    }
+     console.log(r);
+     req.session.operacaoSess = r.tipoOperacao;
 
-    return res.status(400).send("Erro na requisição");
+     res.render('operacao',{operacaoSess: req.session.operacaoSess});   
 });
+
+// router.post('/calc', (req,res) =>{
+    
+//     // formulario via body
+//     // const r = req.body;
+    
+//     // Formulario via url
+//     const r = req.query;
+
+//     const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
+    
+//     if(r.tipoOperacao === "atualizar"){
+//         return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.atualizar()});
+//     }
+    
+//     if(r.tipoOperacao === "reverter"){
+//         return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.reverter()});
+//     }else{
+//         return res.send(calculo.getIpcas());
+//     }
+
+//     return res.status(400).send("Erro na requisição");
+// });
 
 export {router};

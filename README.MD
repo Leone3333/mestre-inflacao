@@ -4,33 +4,6 @@
 Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia em um ano X
 
 
-## Instalação 
-## Funcionamento
-
-### Cálculos 
-
-#### Calculo valorização 
-    1º Passo: Recebe o ano e o valor para saber o poder de compra na época
-
-    2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
-        fator = 1 + IPCA%/100
-
-    3º Multiple TODOS os fatores encontrados até o atual:
-        todosFatores = (fator1995 * fator1996...fator2025) 
-
-    4º valorAntigo = valorAtual/todosFatores
-
-#### Calculo desvalorização 
-    1º Passo: Recebe o ano e o valor para saber o poder de compra na época nos dias de hoje
-
-    2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
-        fator = 1 + IPCA%/100
-
-    3º Multiple TODOS os fatores encontrados até o atual:
-        todosFatores = (fator1995 * fator1996...fator2025) 
-
-    4º valorAntigo = valorAtual * todosFatores
-
 ## Instalçao
     
     1º Clone o respositorio: git clone <url-do-repositorio>
@@ -49,6 +22,32 @@ Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia e
 - JavaScript
 - HTML
 
+
+## Funcionamento
+
+### Cálculos 
+
+#### Atualizar a moeda 
+    1º Passo: Recebe o ano e o valor para saber o poder de compra na época
+
+    2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
+        fator = 1 + IPCA%/100
+
+    3º Multiple TODOS os fatores encontrados até o atual:
+        todosFatores = (fator1995 * fator1996...fator2025) 
+
+    4º valorAntigo = valorAtual/todosFatores
+
+#### Reverter a moeda 
+    1º Passo: Recebe o ano e o valor para saber o poder de compra na época nos dias de hoje
+
+    2º Transforma o IPCA em fator: (PARA CADA ANO DO ESCOLHIDO ATÉ O ATUAL)
+        fator = 1 + IPCA%/100
+
+    3º Multiple TODOS os fatores encontrados até o atual:
+        todosFatores = (fator1995 * fator1996...fator2025) 
+
+    4º valorAntigo = valorAtual * todosFatores
 
 ### Versões
 -- Versão web com node Beta
