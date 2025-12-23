@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +8,26 @@
 </head>
 
 <body>
-    <div class="header">
-        <button onclick="location.href='/'">Home</button>
-    </div>
-    <div class="div-form">
-        <h2>Escolha a operação desejada:</h2>
-        <form action="/tipo" method="post" class="form">
-            <button type="submit" name="tipoOperacao" value="atualizar">
-                Atualizar moeda
-            </button>
+    <div class="backgroundView">
+        <div class="div-form">
 
-            <button type="submit" name="tipoOperacao" value="reverter">
-                Reverter moeda
-            </button>
+            <div class="div-tittle"><h2>Mestre inflação</h2></div>
+            <div class="div-icon"> <img src="../imgs/emojiMonocolo.webp" alt="Icone"> </div>
+            
+            <form action="/tipo" method="post" class="form">
+                
+                <div class="div-btns">
+                    <button class="btn" type="submit" name="tipoOperacao" value="atualizar">
+                        Atualizar moeda
+                    </button>
+                    
+                    <button class="btn" type="submit" name="tipoOperacao" value="reverter">
+                        Reverter moeda
+                    </button>
+                </div>
+            </form>
+        </div>
 
-        </form>
     </div>
 </body>
 

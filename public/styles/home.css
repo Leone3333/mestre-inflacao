@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5370FF;
+}
+
+.backgroundView {
+    margin: 25px;
+    padding: 10px;
+    background-color: #3c5bf7;
+    width: 95%;
+    min-height: calc(100vh - 70px);
+    border-radius: 5px;
+    /* box-shadow:  */
+}
+
+.div-form {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.div-tittle {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 600;
+    color: white;
+    font-size: 30px;
+}
+
+.div-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.div-icon img {
+    width: 30%;
+    height: auto;
+}
+
+.div-btns {
+    display: grid;
+    gap: 20vh;
+    /* border: 1px solid blue; */
+    margin-top: 50px;
+}
+
+.btn{
+    width: 230px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    padding: 30px;
+    border: 3px solid #8086FE;
+    border-radius: 5px;
+    background-color: #E4E5FF;
+    color: #4E3BA7;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
