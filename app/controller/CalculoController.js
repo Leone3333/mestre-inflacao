@@ -33,7 +33,7 @@ class CalculoController {
     }
 
     // Retorna dados do formulario e do calculo
-    getIpcas = () => {
+    getInfos = () => {
         return {
             'TipOperacao': this.tipoOperacao,
             'Valor': this.valor,

@@ -4,43 +4,44 @@ import { CalculoController } from '../controller/CalculoController.js';
 const router = express.Router();
 
 router.get('/', (req,res) => {
+    req.session.destroy();
     res.render("home")
 });
 
-// router.get('/operacao', (req,res) => {
-//     res.render("operacao")
-// });
-
-router.post('/tipo', (req,res) =>{
+router.post('/tipo', (req,res) => {
      const r = req.body;
 
-     console.log(r);
-     req.session.operacaoSess = r.tipoOperacao;
+    //  console.log(r);
+     req.session.operacao = r.tipoOperacao;
 
-     res.render('operacao',{operacaoSess: req.session.operacaoSess});   
+     res.render('operacao',{operacao: req.session.operacao});   
 });
 
-// router.post('/calc', (req,res) =>{
+router.post('/calc', (req,res) => {
     
-//     // formulario via body
-//     // const r = req.body;
+    // formulario via body
+    // const r = req.body;
     
-//     // Formulario via url
-//     const r = req.query;
+    // Formulario via url
+    const r = req.body;
 
-//     const calculo = new CalculoController(r.tipoOperacao,r.anoCorrespondente,r.valor);
+    const calculo = new CalculoController(req.session.operacao,r.ano,r.valor);
     
-//     if(r.tipoOperacao === "atualizar"){
-//         return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.atualizar()});
-//     }
-    
-//     if(r.tipoOperacao === "reverter"){
-//         return res.render('operacao', {operacao: r.tipoOperacao, resultado: calculo.reverter()});
-//     }else{
-//         return res.send(calculo.getIpcas());
-//     }
+    // console.log(req.session);
+    // console.log(req.session.operacao);
+    // console.log(calculo.tipoOperacao);
 
-//     return res.status(400).send("Erro na requisição");
-// });
+    if(calculo.tipoOperacao === "atualizar"){
+       
+        return res.render('resultado', {operacao: calculo.tipoOperacao, resultado: calculo.atualizar(), infos: calculo.getInfos()});
+    }
+    
+    if(calculo.tipoOperacao === "reverter"){
+        return res.render('resultado', {operacao: calculo.tipoOperacao, resultado: calculo.reverter(), infos: calculo.getInfos()});
+    }
+
+    return res.send(calculo.getInfos());
+    
+});
 
 export {router};
