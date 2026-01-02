@@ -8,11 +8,18 @@ router.get('/', (req,res) => {
     res.render("home")
 });
 
+router.get('/operacao', (req,res) => {
+    res.render("operacao")
+});
+
 router.post('/tipo', (req,res) => {
      const r = req.body;
 
-    //  console.log(r);
+     // tipo da operaçao na sessão
      req.session.operacao = r.tipoOperacao;
+     
+     // tipo da operaçao no localStorage
+    //  localStorage.setItem('opStorage', r.tipoOperacao);
 
      res.render('operacao',{operacao: req.session.operacao});   
 });

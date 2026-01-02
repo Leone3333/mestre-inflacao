@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
+    <link rel="stylesheet" href="/styles/resultado.css">
 </head>
+
 <body>
+
+    <!-- HEADER -->
     <div class="header">
-        <button onclick="location.href='/'">Home</button>
+        <div onclick="location.href='/'" class="div-icon"> <img src="../imgs/silhueta-de-icone-de-casa.png" alt="Icone">
+        </div>
     </div>
 
-    <p>Operação: <%= operacao %></p>
-    <p>Resultado: <%= resultado %>R$</p>
-    <p>Resultado: <%= JSON.stringify(infos, null, 2) %></p>
+    <!-- CARD PRINCIPAL -->
+    <div class="result-card 
+        <%= operacao === 'atualizar' ? 'card-atualizar' : 'card-reverter' %>">
+
+        <% if (operacao==='atualizar' ) { %>
+            <h1>
+                <%= infos.Valor %> R$
+            </h1>
+            <p>de <%= infos.AnoCorrespondente %> vale</p>
+            <h1>
+                <%= resultado %> R$ Em <%= new Date().getFullYear() %>
+            </h1>
+            <% } else { %>
+                <h1>
+                    <%= infos.Valor %> R$
+                </h1>
+                <p>em <%= infos.AnoCorrespondente %> valiam</p>
+                <h1>
+                    <%= resultado %> R$
+                </h1>
+                <% } %>
+    </div>
+
+    <div class="toggle-area" id="toggleBtn">
+        <div class="toggle-icon">⌄</div>
+    </div>
+
+    <!-- SIDEBAR / DETALHES -->
+<div class="sidebar" id="sidebar">
+    <p><strong>Tipo operação:</strong> <%= operacao %></p>
+    <p><strong>Valor:</strong> <%= infos.Valor %></p>
+    <p><strong>Ano correspondente:</strong> <%= infos.AnoCorrespondente %></p>
+    <p><strong>IPCA acumulado:</strong> <%= infos.ipcaAcumulado %></p>
+</div>
+
 </body>
+    <script src="/js/result.js"></script>
 </html>

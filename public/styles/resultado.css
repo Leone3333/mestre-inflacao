@@ -1,7 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+/* RESET BÁSICO */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
     background-color: #5370FF;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    padding: 16px;
+}
+
+.div-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.div-icon img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- CARD PRINCIPAL ---------- */
+.result-card {
+    margin: 20px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ESTADO: ATUALIZAR */
+.card-atualizar {
+    background-color: #4B64F4;
+}
+
+/* ESTADO: REVERTER */
+.card-reverter {
+    background-color: #3E54D3;
+}
+
+/* TEXTOS DO CARD */
+.result-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.result-card p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+
+/* === BOTÃO FLUTUANTE === */
+.toggle-area {
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #6b7cff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.toggle-icon {
+    font-size: 32px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* ROTACIONA A SETA */
+.toggle-area.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: #dfe3ff;
+    padding: 25px 20px;
+    border-radius: 25px 25px 0 0;
+    transition: bottom 0.4s ease;
+    z-index: 5;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* QUANDO ATIVA */
+.sidebar.active {
+    bottom: 0;
+}
+
+/* TEXTO */
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 6px;
+}
+
+
+/* ---------- RESPONSIVO (TELAS MAIORES) ---------- */
+@media (min-width: 768px) {
+    .result-card {
+        max-width: 480px;
+        margin: 40px auto;
+    }
+
 }

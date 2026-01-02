@@ -39,7 +39,7 @@ class CalculoController {
             'Valor': this.valor,
             'AnoCorrespondente': this.anoCorrespondente,
             'AnoAtual': this.anoAtual,
-            'ipcaAtual': this.ipcas[this.anoCorrespondente].fator,
+            'ipcaAcumulado': this.ipcas[this.anoCorrespondente].fator,
             // 'ipcas': this.ipcas
         }
     }
