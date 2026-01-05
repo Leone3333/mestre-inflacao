@@ -8,50 +8,46 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
     background-color: #5370FF;
-    min-height: 100vh;
-    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ---------- HEADER ---------- */
 .header {
-    padding: 16px;
-}
+    position: absolute;
+    top: 15px;
+    /* left: 15px; */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
-.div-icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
 }
 
 .div-icon img {
-    width: 100%;
-    height: auto;
+    width: 40px;
+    cursor: pointer;
 }
+
 
 /* ---------- CARD PRINCIPAL ---------- */
 .result-card {
-    margin: 20px;
+    margin-top: 20vh;
     padding: 28px 20px;
     border-radius: 18px;
     text-align: center;
     color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #3451f7;
 }
 
-/* ESTADO: ATUALIZAR */
-.card-atualizar {
-    background-color: #4B64F4;
-}
-
-/* ESTADO: REVERTER */
-.card-reverter {
-    background-color: #3E54D3;
-}
 
 /* TEXTOS DO CARD */
 .result-card h1 {
-    font-size: 2rem;
+    font-size: 2.0rem;
     font-weight: 700;
     margin: 12px 0;
 }
@@ -61,27 +57,37 @@ body {
     opacity: 0.9;
 }
 
-
 /* === BOTÃO FLUTUANTE === */
 .toggle-area {
     position: fixed;
-    bottom: 110px;
+    bottom: 0;
     left: 50%;
+
     transform: translateX(-50%);
-    background: #6b7cff;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+
+    width: 20vw;
+    height: 10vw;
+    max-width: 80px;
+    max-height: 40px;
+
+    background: #ffffff;
+
+    border-top-left-radius: 100vw;
+    border-top-right-radius: 100vw;
+    /* metade do círculo */
+    overflow: hidden;
+    z-index: 1000;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
+
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    z-index: 10;
 }
 
 .toggle-icon {
-    font-size: 32px;
-    color: white;
+    font-size: 38px;
+    color: #09083a;
     transition: transform 0.3s ease;
 }
 
@@ -90,12 +96,14 @@ body {
     transform: rotate(180deg);
 }
 
+
 /* === SIDEBAR === */
 .sidebar {
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
+    min-height: 30vh;
     background: #dfe3ff;
     padding: 25px 20px;
     border-radius: 25px 25px 0 0;
@@ -109,9 +117,12 @@ body {
     bottom: 0;
 }
 
+
+
 /* TEXTO */
 .sidebar p {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 8px;
     margin-bottom: 12px;
     border-bottom: 1px solid #aaa;
     padding-bottom: 6px;

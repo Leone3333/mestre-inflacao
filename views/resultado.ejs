@@ -17,34 +17,34 @@
     </div>
 
     <!-- CARD PRINCIPAL -->
-    <div class="result-card 
-        <%= operacao === 'atualizar' ? 'card-atualizar' : 'card-reverter' %>">
+    <div class="result-card">
 
         <% if (operacao==='atualizar' ) { %>
+            <h1> <%= infos.Valor %> R$</h1>
+            <p>em <%= infos.AnoCorrespondente %> vale</p>
             <h1>
-                <%= infos.Valor %> R$
+                <%= resultado %> R$  %>
             </h1>
-            <p>de <%= infos.AnoCorrespondente %> vale</p>
-            <h1>
-                <%= resultado %> R$ Em <%= new Date().getFullYear() %>
-            </h1>
+            <p> Em <%= new Date().getFullYear() %></p>
             <% } else { %>
                 <h1>
-                    <%= infos.Valor %> R$
+                    <%= infos.Valor %> R$ hoje
                 </h1>
-                <p>em <%= infos.AnoCorrespondente %> valiam</p>
+                <p>valiam </p>
                 <h1>
                     <%= resultado %> R$
                 </h1>
+                <p> em <%= infos.AnoCorrespondente %></p>
                 <% } %>
     </div>
 
     <div class="toggle-area" id="toggleBtn">
-        <div class="toggle-icon">⌄</div>
+        <div class="toggle-icon">^</div>
     </div>
-
+    
     <!-- SIDEBAR / DETALHES -->
-<div class="sidebar" id="sidebar">
+    <div class="sidebar" id="sidebar">
+
     <p><strong>Tipo operação:</strong> <%= operacao %></p>
     <p><strong>Valor:</strong> <%= infos.Valor %></p>
     <p><strong>Ano correspondente:</strong> <%= infos.AnoCorrespondente %></p>

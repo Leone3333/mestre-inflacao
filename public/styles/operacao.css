@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     background-color: #aebcff;
     min-height: 100vh;
     display: flex;
@@ -19,7 +19,12 @@ body {
 .header {
     position: absolute;
     top: 15px;
-    left: 15px;
+    /* left: 15px; */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    
 }
 
 .div-icon img {
@@ -30,13 +35,13 @@ body {
 /* ===== CONTAINER PRINCIPAL ===== */
 .div-form {
     background-color: #4462f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 380px;
     padding: 30px 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     color: #fff;
 }
 
@@ -46,6 +51,7 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
+    padding: 5px;
 }
 
 .form-atualizar {
@@ -55,10 +61,14 @@ body {
 
 /* Quando for REVERTER */
 .form-reverter {
-    background-color: #7a5cff;
+    background-color: #6971FF;
     /* roxo */
 }
 
+.input-ano{
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
 /* ===== SELECT ===== */
 .wrapper-ano select {
     width: 100%;
@@ -67,10 +77,12 @@ body {
     border: none;
     font-size: 1rem;
     outline: none;
+    margin-top: 10px;
 }
 
 /* ===== INPUT ===== */
 .input-valor input {
+    margin-top: 10px;
     width: 100%;
     padding: 14px;
     border-radius: 12px;
