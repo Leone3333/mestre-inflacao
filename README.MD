@@ -49,10 +49,6 @@ Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia e
 
     4º valorAntigo = valorAtual * todosFatores
 
-### Versões
--- Versão web com node Beta
-
--- Versão apk com cordova Alfa
 
 ## Requisitos Funcionais
     1º Funcionar nas suas respectivas plataformas
