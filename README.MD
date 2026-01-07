@@ -4,7 +4,7 @@
 Um aplicativos que calcula com base no IPCA anual, o valor aproximado de uma quantia em um ano X
 
 ## Acessar em: 
-mestre-inflacao-production.up.railway.apps
+[mestre-inflacao](https://mestre-inflacao-production.up.railway.app/)
 
 ## Instalçao local
     
