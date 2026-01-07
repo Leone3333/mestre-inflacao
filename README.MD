@@ -1,10 +1,12 @@
 # Mestre inflação
 
 ## Descrição
-Um aplicativos que calcula com base no IPCA, o valor aproximado de uma quantia em um ano X
+Um aplicativos que calcula com base no IPCA anual, o valor aproximado de uma quantia em um ano X
 
+## Acessar em: 
+mestre-inflacao-production.up.railway.apps
 
-## Instalçao
+## Instalçao local
     
     1º Clone o respositorio: git clone <url-do-repositorio>
 
